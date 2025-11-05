@@ -28,18 +28,26 @@ dados = dados %>%
 print(sapply(dados,function(x) sum(is.na(x))))
 
 #c - criando um histograma da distribuição de idade
-h_idade = ggplot(dados, aes(x = idade)) + 
+ggplot(dados, aes(x = idade)) + 
   geom_histogram(color = "black",binwidth = 5, fill = "skyblue") + 
   labs(title = "Distribuição Idade", x = "Idade", y = "Quantidade") +
   theme_bw()
 
 #d - criando um boxplot da variável tempo_preso
-ggplot(dados, aes(x = tempo_preso)) + 
+ggplot(dados, aes(y = tempo_preso)) + 
+  geom_boxplot(fill = "skyblue") +
+  labs(title = "Boxplot do Tempo Preso", y = "Tempo Preso (meses)") +
+  theme_bw() + 
+  theme(axis.text.x = element_blank())
+
+#e - criando um boxplot da variável score_periculosidade por escolaridade
+ggplot(dados, aes(x = escolaridade, y = score_periculosidade, fill = escolaridade)) + 
   geom_boxplot()
-
-
-
-
+  labs(title = "Score de Periculosidade por Escolaridade",
+       x = "Escolaridade",
+       y = "Score de Periculosidade") +
+  theme_bw() +
+  theme(legend.position = "none")
 
 
 
