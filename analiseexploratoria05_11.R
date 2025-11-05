@@ -10,4 +10,27 @@
 
 # 2, 3 e 4 feitos
 
-# 5 - 
+# 5
+library(readr)
+library(readxl)
+library(dplyr)
+library(ggplot2)
+
+base = read_excel("Base_trabalho.xlsx")
+
+dados = 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
