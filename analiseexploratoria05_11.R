@@ -19,13 +19,27 @@ library(ggplot2)
 #importar a base
 dados = read_excel("Base_trabalho.xlsx")
 
-#transformar 'escolaridade' e 'reincidente' em fatores
+#a - transformar 'escolaridade' e 'reincidente' em fatores
 dados = dados %>%
   mutate(escolaridade = as.factor(escolaridade),
          reincidente = as.factor(reincidente))
 
-#verificar se há dados faltantes
+#b - verificar se há dados faltantes
 print(sapply(dados,function(x) sum(is.na(x))))
+
+#c - criando um histograma da distribuição de idade
+h_idade = ggplot(dados, aes(x = idade)) + 
+  geom_histogram(color = "black",binwidth = 5, fill = "skyblue") + 
+  labs(title = "Distribuição Idade", x = "Idade", y = "Quantidade") +
+  theme_bw()
+
+#d - criando um boxplot da variável tempo_preso
+ggplot(dados, aes(x = tempo_preso)) + 
+  geom_boxplot()
+
+
+
+
 
 
 
