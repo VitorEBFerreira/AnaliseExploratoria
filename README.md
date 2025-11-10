@@ -1,6 +1,6 @@
 # AnaliseExploratoria
 
-Análise dos gráficos:\
+Análise dos gráficos:
 
 * Na **distribuição de idades** é possível notar que há uma concentração maior no meio do que nas pontas. Há mais jovens do que idosos.
 
