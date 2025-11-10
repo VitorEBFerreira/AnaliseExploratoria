@@ -13,7 +13,7 @@ library(usethis)
 use_git_config(user.name = "VitorEBFerreira",
                user.email = "ferreiravitorid.uff.br")
 
-# 5 ####
+# 5 pacotes usados ####
 library(readr)
 library(readxl)
 library(dplyr)
@@ -22,6 +22,9 @@ library(ggplot2)
 dados = read_excel("Base_trabalho.xlsx")
 
 #a - transformar 'escolaridade' e 'reincidente' em fatores####
+#transformando os dados com base no dicionário
+#obs: no dicionário não mostra que reincidente é 0: não 1: sim, mas por dedução
+# e levando em conta o "casado" e filhos" que também usa 0: não e 1: sim
 dados = dados %>%
   mutate(escolaridade = as.factor(escolaridade),
          reincidente = as.factor(reincidente))
