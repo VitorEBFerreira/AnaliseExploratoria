@@ -11,7 +11,7 @@
 
 library(usethis)
 use_git_config(user.name = "VitorEBFerreira",
-               user.emai = "ferreiravitor@id.uff.br")
+               user.email = "ferreiravitorid.uff.br")
 
 # 5 ####
 library(readr)
