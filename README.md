@@ -14,11 +14,20 @@ Definições Estatísticas:\
 
 
 * **Média:** A soma de todos os valores dividida pelo número de observações, é a medida da tendência central.
+\
     $$\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i$$
+\
 * **Mediana:** O valor central que divide o conjunto de dados em duas metades iguais, após os dados serem ordenados.
+\
 * **Variância:** A média dos quadrados das diferenças entre cada valor e a média. Mede a dispersão dos dados. 
+\
     $$s^2 = \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2$$
+\
 * **Desvio Padrão:** A raiz quadrada da variância. É expresso na mesma unidade dos dados.
+\
     $$s = \sqrt{s^2}$$
+\
 * **Amplitude:** A diferença entre o maior valor ($x_{max}$) e o menor valor ($x_{min}$) no conjunto de dados.
-    $$A = x_{max} - x_{min}$$
+\
+$$A = x_{max} - x_{min}$$
+\
